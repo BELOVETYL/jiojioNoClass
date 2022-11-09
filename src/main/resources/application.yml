@@ -1,0 +1,50 @@
+server:
+  #端口配置
+  port: 80
+
+spring:
+  #邮箱配置
+  mail:
+    host: smtp.qq.com
+    username: 3082296874@qq.com
+    password: lyedvjnrdkwydgdg
+    from: 3082296874@qq.com
+    subject: 验证码
+
+  application:
+    name: JiaoJiao
+
+  #数据源配置
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/jiaojiao?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: 123456
+  #缓存配置
+  cache:
+    type: ehcache
+
+jwt:
+  # 加密密钥
+  TOKEN_KEY: 0er5egh2e9ge2h8w2ge8w5th5e2h48q8rg8w6ar2gh1te4h2eg0s3rh8e32dse8hq
+  # 签发人
+  ISSure: joojoo
+  # token有效时长
+  TOKEN_TIMEOUT: 24
+
+
+
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+
+
+
+image:
+  #自定义图片位置
+  path: D:\img\
